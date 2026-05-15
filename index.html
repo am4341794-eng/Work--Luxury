@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Luxury | التجارة الدولية والتوريدات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gold: #C5A059;
+            --secondary-gold: #D4AF37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --soft-white: #f1f1f1;
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cairo', sans-serif; background: var(--dark-bg); color: var(--soft-white); overflow-x: hidden; scroll-behavior: smooth; }
+
+        /* --- الهيدر والتنقل --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 20px 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(10, 10, 10, 0.95); z-index: 1000;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary-gold); font-weight: 900; letter-spacing: 2px; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { color: var(--soft-white); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary-gold); }
+
+        /* --- واجهة الموقع (الرئيسية) --- */
+        .hero {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070'); /* صورة سفينة شحن فخمة */
+            background-size: cover; background-position: center; text-align: center;
+        }
+        .logo-symbol {
+            width: 100px; height: 100px; border: 3px solid var(--primary-gold);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display'; font-size: 4rem; color: var(--primary-gold);
+            margin-bottom: 30px; animation: pulse 2s infinite;
+        }
+        .hero h1 { font-size: 4rem; font-weight: 900; margin-bottom: 10px; letter-spacing: -1px; }
+        .hero p { font-size: 1.4rem; color: var(--primary-gold); max-width: 800px; }
+
+        /* --- الأقسام المشتركة --- */
+        .section { padding: 120px 10%; position: relative; }
+        .sec-title { font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 60px; text-align: center; }
+        .sec-title::after { content: ''; display: block; width: 80px; height: 4px; background: var(--primary-gold); margin: 15px auto; }
+
+        /* --- خدمات الاستيراد والتصدير --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .s-card {
+            background: var(--card-bg); padding: 50px 30px; border-radius: 15px;
+            transition: var(--transition); border: 1px solid #222; text-align: center;
+        }
+        .s-card:hover { transform: translateY(-15px); border-color: var(--primary-gold); background: #1a1a1a; }
+        .s-card i { font-size: 3rem; color: var(--primary-gold); margin-bottom: 25px; }
+        .s-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- سابقة الأعمال (Portfolio) --- */
+        .portfolio-tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .p-item {
+            position: relative; overflow: hidden; border-radius: 10px; height: 350px;
+            background: #111; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            border: 1px solid #333; padding: 20px;
+        }
+        .p-item h4 { color: var(--primary-gold); font-size: 1.4rem; margin-bottom: 10px; }
+        .p-item p { font-size: 0.9rem; opacity: 0.7; }
+
+        /* --- بيانات الاتصال والفروع --- */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .info-box { background: var(--card-bg); padding: 40px; border-radius: 15px; }
+        .info-item { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
+        .info-item i { font-size: 1.5rem; color: var(--primary-gold); }
+
+        /* --- زر واتساب العائم --- */
+        .wa-float {
+            position: fixed; bottom: 40px; right: 40px; background: #25d366;
+            color: #fff; width: 70px; height: 70px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 2000; transition: var(--transition);
+        }
+        .wa-float:hover { transform: scale(1.1) rotate(15deg); }
+
+        /* --- أنيميشن --- */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(197, 160, 89, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+        }
+
+        .reveal { opacity: 0; transform: translateY(50px); transition: 1s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        footer { text-align: center; padding: 50px; border-top: 1px solid #222; font-size: 0.9rem; opacity: 0.5; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">WORK LUXURY</div>
+        <ul class="nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">عن الشركة</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#portfolio">سابقة الأعمال</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="logo-symbol">W</div>
+        <h1>WORK LUXURY</h1>
+        <p>الرائدة في حلول التوريدات والاستيراد والتصدير الدولية 2026</p>
+    </section>
+
+    <section class="section reveal" id="about">
+        <h2 class="sec-title">من نحن</h2>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2rem; line-height: 2;">
+                تأسست <strong>Work Luxury</strong> لخدمة نخبة العملاء والشركات التي تبحث عن موثوقية في سلاسل التوريد العالمية. 
+                نحن متخصصون في ربط الأسواق الدولية (الاستيراد والتصدير) مع تقديم استشارات مالية واستراتيجية تضمن حماية رأس المال ونمو الأعمال.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 40px; margin-top: 50px;">
+                <div><h3 style="color:var(--primary-gold)">+12</h3><p>سنة خبرة</p></div>
+                <div><h3 style="color:var(--primary-gold)">300+</h3><p>عميل نخبة</p></div>
+                <div><h3 style="color:var(--primary-gold)">15</h3><p>شريك دولي</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="services" style="background: #050505;">
+        <h2 class="sec-title">خدماتنا اللوجستية</h2>
+        <div class="services-grid">
+            <div class="s-card">
+                <i class="fas fa-ship"></i>
+                <h3>الاستيراد والتصدير</h3>
+                <p>إدارة كاملة لعمليات الشحن الدولي وتأمين خطوط الإمداد من كافة أنحاء العالم إلى المنطقة العربية.</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-box-open"></i>
+                <h3>التوريدات العامة</h3>
+                <p>تجهيز وتوريد كافة المتطلبات الفنية والتقنية للمشاريع الكبرى بأعلى معايير الجودة العالمية.</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>إدارة المحافظ</h3>
+                <p>توزيع استراتيجي لرأس المال في مشاريع تجارية ناجحة مع تقارير أداء دورية وشفافية مطلقة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="portfolio">
+        <h2 class="sec-title">سابقة الأعمال والشركاء</h2>
+        <div class="portfolio-tabs">
+            <div class="p-item">
+                <h4>شركة بن غيث</h4>
+                <p>تأمين الخدمات اللوجستية والسفر الاحترافي</p>
+            </div>
+            <div class="p-item">
+                <h4>رياض الخزامى</h4>
+                <p>شريك التطوير العقاري والإنشاءات الكبرى</p>
+            </div>
+            <div class="p-item">
+                <h4>SATTAM</h4>
+                <p>إدارة الفعاليات الدولية والإنتاج الإعلامي</p>
+            </div>
+            <div class="p-item">
+                <h4>المشاريع الحكومية</h4>
+                <p>توريدات فنية واستراتيجية لقطاعات حيوية</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+        <h2 class="sec-title">تواصل معنا</h2>
+        <div class="contact-grid">
+            <div class="info-box">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>المملكة العربية السعودية</strong>
+                        <p>الرياض - حي السليمانية - شارع الأمير سلطان</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>جمهورية مصر العربية</strong>
+                        <p>القاهرة - القطامية - مدينة الفرسان</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>الخط المباشر</strong>
+                        <p dir="ltr">+966 56 927 7747</p>
+                    </div>
+                </div>
+            </div>
+            <div style="background: var(--card-bg); padding: 40px; border-radius: 15px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary-gold);">طلب استشارة خاصة</h3>
+                <form>
+                    <input type="text" placeholder="الاسم الكامل" style="width:100%; padding:15px; margin-bottom:15px; background:#000; border:1px solid #333; color:#fff;">
+                    <input type="email" placeholder="البريد الإلكتروني" style="width:100%; padding:15px; margin-bottom:15px; background:#000; border:1px solid #333; color:#fff;">
+                    <textarea placeholder="تفاصيل الطلب" style="width:100%; padding:15px; height:100px; background:#000; border:1px solid #333; color:#fff;"></textarea>
+                    <button type="button" style="width:100%; padding:15px; background:var(--primary-gold); color:#000; border:none; font-weight:bold; cursor:pointer;">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/966569277747" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 WORK LUXURY | جميع الحقوق محفوظة لشؤون الاستيراد والتصدير</p>
+    </footer>
+
+    <script>
+        // تأثير الظهور عند السكرول
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        
+        // تشغيل الأنيميشن لأول مرة
+        reveal();
+    </script>
+</body>
+</html>
