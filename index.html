@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NRQ9KLHL');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Luxury - محفظة الشركات، التوريدات والتجهيزات الطبية</title>
@@ -18,109 +23,458 @@
             --text-muted: #A0A0A0;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Cairo', sans-serif; background-color: var(--black); color: var(--text-color); line-height: 1.8; overflow-x: hidden; scroll-behavior: smooth; }
-        .brand-font { font-family: 'Cinzel', serif; letter-spacing: 2px; direction: ltr; display: inline-block; }
-        h1, h2, h3, h4, h5 { color: var(--gold); }
-
-        /* شريط التنقل */
-        header { background-color: rgba(0, 0, 0, 0.98); border-bottom: 1px solid rgba(212, 175, 55, 0.2); position: sticky; top: 0; z-index: 1000; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-area { text-align: right; flex-shrink: 0; }
-        .logo-area h1 { font-size: 24px; font-weight: 700; margin: 0; }
-        .logo-area span { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; font-weight: 600; display: block; margin-top: 2px; }
-        
-        .menu-toggle { display: none; color: var(--gold); font-size: 24px; cursor: pointer; background: none; border: none; }
-        nav { display: flex; align-items: center; }
-        nav a { color: var(--text-color); text-decoration: none; margin-right: 20px; font-size: 13px; font-weight: 600; transition: color 0.3s; white-space: nowrap; }
-        nav a:hover { color: var(--gold); }
-
-        /* ========================================= */
-        /* الواجهة الرئيسية والخلفية */
-        /* ========================================= */
-        .hero { height: 75vh; display: flex; align-items: center; justify-content: center; position: relative; background: #000; }
-        .hero-content { text-align: center; padding: 40px 20px; z-index: 2; width: 100%; background-color: transparent; }
-        .hero h2 { font-size: 40px; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
-        .hero p { font-size: 18px; max-width: 700px; color: #fff; margin: 0 auto; font-weight: 400; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
-        
-        .hero-bg-image {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            /* أحمد، لاستخدام صورة الرخام الأسود الخاصة بالبروفايل:
-               قم بمسح الرابط أدناه وضع مسار صورتك، مثال:
-               background-image: url('images/black-marble.jpg');
-            */
-            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop');
-            background-position: center; background-size: cover; background-repeat: no-repeat; opacity: 0.4; z-index: 1;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* التخطيط والأقسام */
-        section { padding: 80px 20px; max-width: 1400px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 28px; margin-bottom: 50px; position: relative; }
-        .section-title::after { content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 60px; height: 2px; background-color: var(--gold); }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--black);
+            color: var(--text-color);
+            line-height: 1.8;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .brand-font {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--gold);
+        }
+
+        /* ========================================= */
+        /* شريط التنقل (Header) */
+        /* ========================================= */
+        header {
+            background-color: rgba(0, 0, 0, 0.98);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .logo-area h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .logo-area span {
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* ========================================= */
+        /* الواجهة الرئيسية (Hero) */
+        /* ========================================= */
+        .hero {
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: #000;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 40px 20px;
+            z-index: 2;
+            width: 100%;
+            background-color: #000;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            color: var(--text-muted);
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        /* ========================================= */
+        /* الأقسام العامة والتخطيط الشبكي */
+        /* ========================================= */
+        section {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: var(--gold);
+        }
+
+        .grid-2, .grid-3 {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+            background-color: var(--dark-gray);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h4 {
+            font-size: 16px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ========================================= */
+        /* قسم التجهيزات الطبية (Medical) بالصور المعدلة */
+        /* ========================================= */
+        .medical-section {
+            background-color: #000;
+            padding: 80px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.05);
+        }
+
+        .medical-card {
+            background-color: #1a1a1a;
+            border: 2px solid var(--gold);
+            text-align: center;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .medical-card h3 {
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .medical-gallery {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            height: 250px;
+            background-color: #111;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.85);
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* ========================================= */
+        /* الأقسام الثانوية والشركاء */
+        /* ========================================= */
+        .sub-brand-badge {
+            display: inline-block;
+            font-size: 11px;
+            color: #000;
+            background-color: var(--gold);
+            padding: 2px 10px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .values-bar {
+            background-color: var(--dark-gray);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .values-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .value-item {
+            font-size: 18px;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .partners-section {
+            background-color: #0A0A0A;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+
+        .partner-item {
+            background-color: var(--light-gray);
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            border: 1px solid rgba(212, 175, 55, 0.05);
+            transition: all 0.3s ease;
+        }
         
-        .grid-2, .grid-3 { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-        .card { background-color: var(--dark-gray); border: 1px solid rgba(212, 175, 55, 0.1); padding: 30px; transition: all 0.3s ease; }
-        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .card h3 { font-size: 20px; margin-bottom: 15px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .card h4 { font-size: 16px; color: var(--gold); margin-bottom: 10px; }
-        .card p { font-size: 14px; color: var(--text-muted); }
+        .partner-item:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
 
-        /* قسم التجهيزات الطبية */
-        .medical-section { background-color: #000; padding: 80px 20px; border-top: 1px solid rgba(212, 175, 55, 0.05); }
-        .medical-card { background-color: #1a1a1a; border: 2px solid var(--gold); text-align: center; padding: 40px; margin-bottom: 40px; }
-        .medical-gallery { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-        .gallery-item { position: relative; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.3); height: 250px; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .gallery-item:hover img { transform: scale(1.1); }
-        .gallery-caption { position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px; background: rgba(0, 0, 0, 0.85); color: var(--gold); font-size: 14px; font-weight: 600; text-align: center; }
+        /* ========================================= */
+        /* قسم التواصل */
+        /* ========================================= */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
 
-        /* العلامات والشركاء */
-        .sub-brand-badge { display: inline-block; font-size: 11px; color: #000; background-color: var(--gold); padding: 2px 10px; margin-bottom: 10px; font-weight: 700; }
-        .values-bar { background-color: var(--dark-gray); border: 1px solid rgba(212, 175, 55, 0.1); padding: 30px; text-align: center; margin-top: 30px; }
-        .values-container { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; flex-wrap: wrap; }
-        .value-item { font-size: 18px; color: var(--gold); font-weight: 700; }
-        .partners-section { background-color: #0A0A0A; padding: 60px 20px; border-top: 1px solid rgba(212, 175, 55, 0.1); }
-        .partners-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; text-align: center; }
-        .partner-item { background-color: var(--light-gray); padding: 15px; font-size: 14px; font-weight: 600; color: var(--text-muted); border: 1px solid rgba(212, 175, 55, 0.05); transition: all 0.3s ease; }
-        .partner-item:hover { color: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
-
-        /* التواصل والواتساب */
-        .contact-container { display: grid; grid-template-columns: 1fr; gap: 40px; }
+        .contact-info h3 { font-size: 20px; margin-bottom: 15px; }
         .info-block { margin-bottom: 20px; }
         .info-block h4 { font-size: 14px; color: var(--gold); margin-bottom: 3px; }
         .info-block p { font-size: 14px; color: var(--text-muted); direction: ltr; text-align: right; }
-        .contact-form { background-color: var(--dark-gray); padding: 30px; border: 1px solid rgba(212, 175, 55, 0.2); }
+
+        .contact-form {
+            background-color: var(--dark-gray);
+            padding: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--gold); }
-        .form-group input, .form-group textarea { width: 100%; background-color: var(--light-gray); border: 1px solid rgba(212, 175, 55, 0.1); padding: 10px 15px; color: var(--text-color); font-family: 'Cairo', sans-serif; font-size: 14px; }
-        .submit-btn { background-color: var(--gold); color: #000; width: 100%; padding: 12px; font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 16px; border: none; cursor: pointer; }
-        
-        .whatsapp-float { position: fixed; bottom: 20px; left: 20px; background-color: #25D366; color: #fff; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0px 4px 8px rgba(0,0,0,0.5); z-index: 999; text-decoration: none; }
-        footer { background-color: #000; text-align: center; padding: 30px 20px; font-size: 12px; color: var(--text-muted); border-top: 1px solid rgba(212, 175, 55, 0.1); }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background-color: var(--light-gray);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 10px 15px;
+            color: var(--text-color);
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+        }
 
-        /* التجاوب */
+        .submit-btn {
+            background-color: var(--gold);
+            color: #000;
+            width: 100%;
+            padding: 12px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25D366;
+            color: #fff;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* ========================================= */
+        /* شاشات الكمبيوتر (Desktop) */
+        /* ========================================= */
         @media (min-width: 992px) {
             header { padding: 15px 40px; }
-            .hero-content { background-color: transparent; }
+            .logo-area h1 { font-size: 26px; }
+            .logo-area span { font-size: 11px; }
+
+            .hero { height: 80vh; background: none; }
+            .hero-content {
+                background-color: transparent;
+                padding: 0;
+            }
+            .hero h2 { font-size: 55px; }
+            .hero p { font-size: 20px; }
+            .hero-bg-image { opacity: 0.2; }
+
+            .section-title { font-size: 32px; }
+            
             .contact-container { grid-template-columns: 1fr 1fr; }
             .whatsapp-float { bottom: 40px; left: 40px; width: 65px; height: 65px; font-size: 35px; }
         }
+
         @media (max-width: 991px) {
             .menu-toggle { display: block; }
-            nav { display: none; width: 100%; flex-direction: column; position: absolute; top: 100%; left: 0; background-color: rgba(0,0,0,0.98); padding: 20px; border-bottom: 1px solid var(--gold); }
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: rgba(0,0,0,0.95);
+                padding: 20px;
+                border-bottom: 1px solid var(--gold);
+            }
             nav.active { display: flex; }
-            nav a { margin: 0; padding: 10px 0; text-align: center; width: 100%; border-bottom: 1px solid #222; }
-            .hero-content { background-color: rgba(0,0,0,0.7); } /* لجعل النص مقروءاً في الجوال */
+            nav a { margin: 0; padding: 10px 0; text-align: center; width: 100%; }
         }
     </style>
 </head>
 <body>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRQ9KLHL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <div class="logo-area">
             <h1 class="brand-font">WORK LUXURY</h1>
             <span>استثمار | محفظة الشركات | توريدات واستيراد وتصدير</span>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <nav id="nav-menu">
             <a href="#about" onclick="toggleMenu()">نظرة عامة</a>
             <a href="#services" onclick="toggleMenu()">الخدمات الأساسية</a>
@@ -145,27 +499,28 @@
         <div class="grid-2">
             <div class="card">
                 <h3>مقدمة استراتيجية</h3>
-                <p>تعمل Work Luxury عند تقاطع الاستثمار الاستراتيجي، والتداول الاحترافي، وإدارة المحافظ. تأسست الشركة بهدف تقديم خدمات مالية بمستوى مؤسسي يتم تقديمها من خلال تجربة عملاء فاخرة. كل تعامل مدفوع بالوضوح، والحوكمة، والعقلية الموجهة نحو النتائج.</p>
+                <p>تعمل Work Luxury عند تقاطع الاستثمار الاستراتيجي، والتداول الاحترافي، وإدارة المحافظ. تأسست الشركة بهدف واضح: تقديم خدمات مالية بمستوى مؤسسي يتم تقديمها من خلال تجربة عملاء فاخرة. كل تعامل مدفوع بالوضوح، والحوكمة، والعقلية الموجهة نحو النتائج.</p>
             </div>
             <div class="card">
                 <h3>الهيكل التنظيمي</h3>
-                <p>شركة ذات هيكل خاص متخصصة في التداول، الاستشارات الاستثمارية، والرقابة على المحافظ. نعمل مع الأفراد ذوي الملاءة المالية العالية، المكاتب العائلية، والكيانات المؤسسية التي تسعى إلى نمو مدروس وحماية لرأس المال.</p>
+                <p>نحن شركة ذات هيكل خاص متخصصة في التداول، والاستشارات الاستثمارية، والرقابة على المحافظ. نعمل مع الأفراد ذوي الملاءة المالية العالية، والمكاتب العائلية، والكيانات المؤسسية التي تسعى إلى نمو مدروس وحماية لرأس المال.</p>
             </div>
             <div class="card">
-                <h3>رؤيتنا</h3>
-                <p>ترسيخ مكانة Work Luxury كمرجع إقليمي موثوق في خدمات الاستثمار الفاخرة. نهدف إلى بناء علاقات طويلة الأمد قائمة على اتساق الأداء، والشفافية، والاستشراف الاستراتيجي.</p>
+                <h3>الرؤية</h3>
+                <p>تتمثل رؤيتنا في ترسيخ مكانة Work Luxury كمرجع إقليمي موثوق في خدمات الاستثمار الفاخرة. نهدف إلى بناء علاقات طويلة الأمد قائمة على اتساق الأداء، والشفافية، والاستشراف الاستراتيجي.</p>
             </div>
             <div class="card">
-                <h3>رسالتنا</h3>
-                <p>تقديم استراتيجيات مالية مخصصة تتماشى مع أهداف العملاء مع الحفاظ على إدارة منضبطة للمخاطر. نركز على التميز في التنفيذ، واتخاذ القرارات المستنيرة، والاستدامة.</p>
+                <h3>الرسالة (المهمة)</h3>
+                <p>تتمثل مهمتنا في تقديم استراتيجيات مالية مخصصة تتماشى مع أهداف العملاء مع الحفاظ على إدارة منضبطة للمخاطر. نركز على التميز في التنفيذ، واتخاذ القرارات المستنيرة، والاستدامة طويلة الأجل.</p>
             </div>
         </div>
+        
         <div class="values-bar">
-            <div style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">إدارة رأس المال تتطلب مسؤولية ودقة وسلوكاً أخلاقياً، وهذه هي قيمنا:</div>
+            <div style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">نؤمن بأن إدارة رأس المال تتطلب مسؤولية ودقة وسلوكاً أخلاقياً، وهذه هي قيمنا:</div>
             <div class="values-container">
-                <div class="value-item">النزاهة</div>
-                <div class="value-item">السرية التامة</div>
-                <div class="value-item">المساءلة</div>
+                <div class="value-item">النزاهة (INTEGRITY)</div>
+                <div class="value-item">السرية (CONFIDENTIALITY)</div>
+                <div class="value-item">المساءلة (ACCOUNTABILITY)</div>
             </div>
         </div>
     </section>
@@ -174,16 +529,16 @@
         <h2 class="section-title">الخدمات الأساسية</h2>
         <div class="grid-3">
             <div class="card">
-                <h3><i class="fas fa-ship"></i> التوريدات والاستيراد</h3>
+                <h3><i class="fas fa-ship"></i> التوريدات والاستيراد والتصدير</h3>
                 <p>إدارة وتسهيل العمليات التجارية الدولية، وتوفير خطوط توريد موثوقة للشركات والمشاريع الكبرى.</p>
             </div>
             <div class="card">
                 <h3><i class="fas fa-chart-line"></i> خدمات الاستثمار</h3>
-                <p>استراتيجيات توظيف رأس المال المهيكلة، والاستثمارات الخاصة المتنوعة بناءً على ظروف السوق.</p>
+                <p>تشمل استراتيجيات توظيف رأس المال المهيكلة، والاستثمارات الخاصة، واستراتيجيات النمو المتنوعة بناءً على ظروف السوق.</p>
             </div>
             <div class="card">
                 <h3><i class="fas fa-exchange-alt"></i> خدمات التداول</h3>
-                <p>حلول تداول مدعومة بالتحليل الفني وأبحاث السوق، وتحكمها معايير صارمة لإدارة المخاطر.</p>
+                <p>حلول تداول احترافية مدعومة بالتحليل الفني وأبحاث السوق، وتحكمها معايير صارمة لإدارة المخاطر.</p>
             </div>
             <div class="card">
                 <h3><i class="fas fa-briefcase"></i> إدارة المحافظ</h3>
@@ -191,11 +546,11 @@
             </div>
             <div class="card">
                 <h3><i class="fas fa-globe"></i> الخبرة في السوق</h3>
-                <p>فهم عميق للأسواق المالية الإقليمية والعالمية لتحديد الفرص الاستثمارية.</p>
+                <p>فهم عميق للأسواق المالية الإقليمية والعالمية لتحديد الفرص الاستثمارية وتجنب التعرض للتقلبات.</p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-shield-alt"></i> إدارة المخاطر</h3>
-                <p>تطبيق استراتيجيات الدخول والخروج المنضبطة للحفاظ على رأس المال ومواءمة الاستثمارات.</p>
+                <h3><i class="fas fa-shield-alt"></i> إدارة المخاطر والتخطيط</h3>
+                <p>تطبيق استراتيجيات الدخول والخروج المنضبطة للحفاظ على رأس المال ومواءمة الاستثمارات مع الأهداف طويلة الأجل.</p>
             </div>
         </div>
     </section>
@@ -203,20 +558,21 @@
     <div class="medical-section" id="medical">
         <section>
             <div class="medical-card">
-                <h3 style="color:var(--gold); font-size:26px; margin-bottom:15px;"><i class="fas fa-hospital-alt"></i> تجهيزات المعدات الطبية</h3>
-                <p style="color: #ccc; max-width: 800px; margin: 0 auto;">تقدم الشركة حلولاً متكاملة في مجال تجهيز المستشفيات والمراكز الطبية والعيادات، من خلال توفير كافة أنواع الأجهزة والمستلزمات بمختلف التخصصات. نوفر منتجات من مختلف الصناعات العالمية لتلبية احتياجات القطاع الصحي، وتشمل خدماتنا <strong>التوريد، التركيب، التشغيل، الدعم الفني، وخدمات ما بعد البيع.</strong></p>
+                <h3><i class="fas fa-hospital-alt"></i> تجهيزات المعدات الطبية</h3>
+                <p style="color: #ccc; max-width: 800px; margin: 0 auto;">تقدم الشركة حلولاً متكاملة في مجال تجهيز المستشفيات والمراكز الطبية والعيادات، من خلال توفير كافة أنواع الأجهزة الطبية والمستلزمات بمختلف التخصصات، وفق أعلى معايير الجودة والكفاءة. كما نوفر منتجات من مختلف الصناعات والمنشأ العالمية لتلبية احتياجات القطاع الصحي، وتشمل خدماتنا <strong>التوريد والتركيب والتشغيل والدعم الفني وخدمات ما بعد البيع.</strong></p>
             </div>
+            
             <div class="medical-gallery">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="تجهيز العيادات">
-                    <div class="gallery-caption">تجهيز العيادات والأقسام التخصصية</div>
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="أجهزة العيادات المتخصصة">
+                    <div class="gallery-caption">تجهيز العيادات والأقسام الطبية التخصصية</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="مراقبة حيوية">
+                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="أجهزة مراقبة المؤشرات الحيوية">
                     <div class="gallery-caption">أجهزة مراقبة ورصد المؤشرات الحيوية</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="غرف العمليات">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="أنظمة إضاءة جراحية">
                     <div class="gallery-caption">أنظمة وبنية غرف العمليات المتكاملة</div>
                 </div>
             </div>
@@ -228,68 +584,70 @@
         <div class="grid-3">
             <div class="card">
                 <h3>تجربة عملاء فاخرة</h3>
-                <p>تقدم تجربتنا مستوى عالٍ من السرية والاحترافية في الاتصال وإعداد التقارير والاستشارات.</p>
+                <p>تقدم Work Luxury تجربة عملاء سرية وعالية المستوى. تتم خدمات الاتصال والإبلاغ والاستشارات باحترافية وسرية.</p>
             </div>
             <div class="card">
                 <h3>حلول مخصصة</h3>
-                <p>نقوم بتصميم الحلول بناءً على أفق الاستثمار للعميل واحتياجات السيولة والأهداف الاستراتيجية.</p>
+                <p>كل مشاركة للعميل فريدة من نوعها. نقوم بتصميم الحلول بناءً على أفق الاستثمار واحتياجات السيولة والأهداف الاستراتيجية.</p>
             </div>
             <div class="card">
                 <h3>قياس الأداء</h3>
-                <p>يتم قياس الأداء عبر مقاييس شفافة، ونعطي الأولوية للاتساق بدلاً من المضاربة.</p>
+                <p>يتم قياس الأداء من خلال مقاييس شفافة وتقارير منظمة. نحن نعطي الأولوية للاتساق على المضاربة.</p>
             </div>
             <div class="card">
-                <h3>التركيز الإقليمي</h3>
-                <p>تتركز عملياتنا في أسواق الخليج والشرق الأوسط مع إدارة الفرص الدولية عبر الحدود.</p>
+                <h3>التركيز الإقليمي والعالمي</h3>
+                <p>تتركز عملياتنا في أسواق الخليج والشرق الأوسط مع الحفاظ على التعرض الدولي لإدارة الفرص عبر الحدود.</p>
             </div>
             <div class="card">
                 <h3>القيادة</h3>
-                <p>فريق قيادة يجمع بين الخبرة المالية، الانضباط التشغيلي، والبصيرة الاستراتيجية المركزية.</p>
+                <p>يجمع فريق القيادة لدينا بين الخبرة المالية والانضباط التشغيلي والبصيرة الاستراتيجية. اتخاذ القرار مركزي وخاضع للرقابة.</p>
             </div>
             <div class="card">
-                <h3>لماذا نحن؟</h3>
-                <p>يختارنا العملاء من أجل الحوكمة، السرية، والتنفيذ. نؤمن بأن النجاح المستدام يُبنى بالصبر لإنشاء قيمة طويلة الأجل.</p>
+                <h3>فلسفة النجاح (لماذا نحن؟)</h3>
+                <p>يختار العملاء Work Luxury من أجل الحوكمة والتكتم والتنفيذ المنضبط. نحن نؤمن بأن النجاح المستدام يُبنى من خلال الصبر والثقة لخلق قيمة طويلة الأجل.</p>
             </div>
         </div>
     </section>
 
     <section id="sub-brands" style="background-color: var(--dark-gray); padding-top: 80px; padding-bottom: 80px;">
         <h2 class="section-title">العلامات المدارة والخدمات المتقدمة</h2>
+        
         <div class="grid-2">
             <div class="card" style="background-color: #1a1a1a;">
-                <div class="sub-brand-badge">بإدارة شركة بن غيث</div>
+                <div class="sub-brand-badge">إدارة شركة بن غيث (Bin Ghaith)</div>
                 <h3>خدمات السفر الاحترافية</h3>
-                <p>شركة رائدة في إدارة السفر في السعودية، بخبرة 40 عاماً في تقديم حلول سفر متكاملة للأفراد والشركات محلياً وعالمياً.</p>
+                <p>تعتبر "بن غيث" شركة رائدة في إدارة السفر في المملكة العربية السعودية، بخبرة تزيد عن 40 عاماً في تقديم حلول سفر متكاملة للأفراد والشركات محلياً وعالمياً.</p>
             </div>
             <div class="card" style="background-color: #1a1a1a;">
-                <div class="sub-brand-badge">بإدارة وكالة سطام (SATTAM)</div>
-                <h3>إدارة الفعاليات والإنتاج</h3>
-                <p>وكالة متكاملة للفعاليات، الإنتاج الإعلامي، والتسويق بالرياض (خبرة 15 عاماً). شريك استراتيجي للجهات الحكومية والشركات.</p>
+                <div class="sub-brand-badge">إدارة وكالة سطام (SATTAM)</div>
+                <h3>خدمات إدارة الفعاليات</h3>
+                <p>وكالة متكاملة لإدارة الفعاليات والإنتاج الإعلامي والتسويق المباشر في الرياض بخبرة تتجاوز 15 عاماً. تعمل كشريك أعمال استراتيجي للجهات الحكومية والشركات الكبرى لتحقيق أعلى عائد على الاستثمار.</p>
             </div>
         </div>
 
-        <h3 class="brand-font" style="text-align: center; margin-top: 50px; margin-bottom: 20px; font-size: 22px;">شركة رياض الخزامى المحدودة</h3>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">متخصصون في التصميم، البناء، والتطوير. وتدير الشركة الأقسام التالية:</p>
+        <h3 class="brand-font" style="text-align: center; margin-top: 50px; margin-bottom: 30px; font-size: 22px;">شركة رياض الخزامى المحدودة (Riyadh Khozamah Company L.T.D)</h3>
+        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 40px;">مقدم خدمات متميز متخصص في التصميم والإدارة والبناء والتطوير، ملتزم بتقديم حلول عملية وعالية الجودة. وتدير الشركة الأقسام التالية:</p>
+        
         <div class="grid-3">
             <div class="card" style="background-color: #111;">
-                <h4>المقاولات (Construction)</h4>
-                <p>الأعمال المدنية والكهروميكانيكية وتكامل الأنظمة الأمنية لتلبية متطلبات السوق السعودي.</p>
+                <h4>قطاع البناء والمقاولات (Construction)</h4>
+                <p>تلبية متطلبات السوق السعودي المتسارعة في مجالات الأعمال المدنية والكهروميكانيكية وتكامل الأنظمة الأمنية.</p>
             </div>
             <div class="card" style="background-color: #111;">
-                <h4>الخدمات والتجارة (Service & Trading)</h4>
-                <p>استقطاب أفضل الشركات التجارية عالمياً للعمل المشترك في السعودية ومنطقة الخليج.</p>
+                <h4>الخدمات، التعليم، والتجارة (Service, Education & Trading)</h4>
+                <p>استقطاب أفضل الشركات التجارية من جميع أنحاء العالم للعمل المشترك في السعودية ومنطقة الخليج.</p>
             </div>
             <div class="card" style="background-color: #111;">
-                <h4>الضيافة (Pain Delicieux)</h4>
-                <p>تأسست 2012 كشركة متخصصة في خدمات المخابز والمعجنات والتموين السريعة النمو.</p>
+                <h4>الضيافة - بان ديليسو (Hospitality - Pain Delicieux)</h4>
+                <p>تأسست عام 2012 كشركة متخصصة في خدمات المخابز والمعجنات والتموين، وتعتبر من أسرع الشركات نمواً.</p>
             </div>
             <div class="card" style="background-color: #111;">
-                <h4>كارجو كاب (Cargo Cab)</h4>
-                <p>شركة أمريكية لخدمات الشحن والتوزيع اللوجستي للأفراد والشركات بدعم تشغيلي 100%.</p>
+                <h4>الوكالة - كارجو كاب (Agency - Cargo Cab)</h4>
+                <p>شركة أمريكية مقرها نيوجيرسي ولها مكتب إقليمي في الإمارات (دبي)، تقدم خدمات الشحن والتوزيع بدعم تشغيلي 100% احترافي.</p>
             </div>
             <div class="card" style="background-color: #111;">
                 <h4>تجهيزات الفنادق (Hotel Supplies)</h4>
-                <p>توفير الحلول الداخلية الشاملة وتوريد أرقى المنتجات العالمية لقطاع الفنادق.</p>
+                <p>تقديم إعدادات فندقية شاملة وحلول داخلية وتوريد أرقى المنتجات الفندقية لقطاع الضيافة.</p>
             </div>
         </div>
     </section>
@@ -298,22 +656,22 @@
         <h2 class="section-title">شركاؤنا الرئيسيون</h2>
         <div class="partners-grid">
             <div class="partner-item">بابل (Babel)</div>
-            <div class="partner-item">عبداللطيف جميل</div>
-            <div class="partner-item">مجموعة شلهوب</div>
-            <div class="partner-item">روبي تيوزداي</div>
-            <div class="partner-item">مستشفيات السعودي الألماني</div>
+            <div class="partner-item">عبداللطيف جميل (Abdul Latif Jameel)</div>
+            <div class="partner-item">مجموعة شلهوب (CHALHOUB GROUP)</div>
+            <div class="partner-item">روبي تيوزداي (Ruby Tuesday)</div>
+            <div class="partner-item">مجموعة مستشفيات السعودي الألماني</div>
             <div class="partner-item">مدينة الملك عبدالله (BAY LA SUN)</div>
-            <div class="partner-item">مستشفى الملك فيصل التخصصي</div>
-            <div class="partner-item">مقهى أربيكا (ARABICA)</div>
-            <div class="partner-item">المركز الطبي الدولي</div>
+            <div class="partner-item">مستشفى الملك فيصل التخصصي ومركز الأبحاث</div>
+            <div class="partner-item">مقهى أربيكا (ARABICA COFFEE HOUSE)</div>
+            <div class="partner-item">المركز الطبي الدولي (International Medical Center)</div>
             <div class="partner-item">مدرسة جدة الإعدادية النحوية</div>
             <div class="partner-item">لو ميريديان (LE MERIDIEN)</div>
-            <div class="partner-item">مدارس الأجيال المتطورة (AGS)</div>
-            <div class="partner-item">أتيس إنترناشيونال</div>
-            <div class="partner-item">موفنبيك (MÖVENPICK)</div>
+            <div class="partner-item">مدارس الأجيال المتطورة العالمية (AGS)</div>
+            <div class="partner-item">أتيس إنترناشيونال (ATISH INTERNATIONAL)</div>
+            <div class="partner-item">فنادق ومنتجعات موفنبيك (MÖVENPICK)</div>
             <div class="partner-item">نستله (Nestle)</div>
-            <div class="partner-item">مدرسة جدة الخاصة (JPIS)</div>
-            <div class="partner-item">المدرسة الفرنسية العالمية بجدة</div>
+            <div class="partner-item">مدرسة جدة الخاصة العالمية (JPIS)</div>
+            <div class="partner-item">المدرسة الفرنسية العالمية في جدة</div>
         </div>
     </section>
 
@@ -323,62 +681,74 @@
             <div class="contact-info">
                 <h3>المقرات الرئيسية</h3>
                 <div class="info-block">
-                    <h4>فرع السعودية</h4>
+                    <h4>فرع المملكة العربية السعودية</h4>
                     <p>الرياض - حي السليمانية - شارع الأمير سلطان بن عبدالعزيز</p>
                 </div>
                 <div class="info-block">
-                    <h4>فرع مصر</h4>
+                    <h4>فرع جمهورية مصر العربية</h4>
                     <p>القاهرة - القطامية - مدينة الفرسان - مبنى 21 - شقة 910</p>
                 </div>
                 <div class="info-block">
-                    <h4>الاتصال المباشر</h4>
+                    <h4>قنوات الاتصال المباشر</h4>
                     <p>+966 56 927 7747 <br> +966 55 141 2111</p>
                     <p>Sattamka99@gmail.com</p>
                 </div>
             </div>
             
             <div class="contact-form">
-                <form id="waForm" onsubmit="submitWa(event)">
+                <form id="luxuryForm" onsubmit="submitToWhatsApp(event)">
                     <div class="form-group">
                         <label>الاسم الكريم / الجهة</label>
-                        <input type="text" id="waName" required placeholder="الشركة أو المستشفى...">
+                        <input type="text" id="clientName" required placeholder="مثال: شركة، مستشفى، أو مؤسسة">
                     </div>
                     <div class="form-group">
-                        <label>رقم التواصل</label>
-                        <input type="tel" id="waPhone" required placeholder="+966...">
+                        <label>رقم الجوال للتواصل</label>
+                        <input type="tel" id="clientPhone" required placeholder="+966...">
                     </div>
                     <div class="form-group">
                         <label>الخدمة المطلوبة</label>
-                        <input type="text" id="waService" placeholder="توريدات / تجهيزات / استثمار...">
+                        <input type="text" id="serviceInterest" placeholder="مثال: توريدات / تجهيزات طبية / استيراد">
                     </div>
                     <div class="form-group">
-                        <label>التفاصيل</label>
-                        <textarea id="waMsg" rows="4" required placeholder="وضح طلبك..."></textarea>
+                        <label>تفاصيل الطلب</label>
+                        <textarea id="clientMessage" rows="4" required placeholder="يرجى توضيح طلب التجهيزات أو التوريد..."></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">إرسال عبر الواتساب <i class="fab fa-whatsapp"></i></button>
+                    <button type="submit" class="submit-btn">إرسال الطلب عبر الواتساب <i class="fab fa-whatsapp"></i></button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 WORK LUXURY. جميع الحقوق محفوظة.</p>
+        <p>&copy; 2026 WORK LUXURY. جميع الحقوق محفوظة. استثمارات، تجارة دولية، وتجهيزات طبية بسرية واحترافية تامة.</p>
     </footer>
 
-    <a href="https://wa.me/966549941540" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/966549941540" class="whatsapp-float" target="_blank" title="تواصل معنا فوراً عبر الواتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }
-        function submitWa(e) {
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        function submitToWhatsApp(e) {
             e.preventDefault();
-            const n = document.getElementById('waName').value;
-            const p = document.getElementById('waPhone').value;
-            const s = document.getElementById('waService').value;
-            const m = document.getElementById('waMsg').value;
-            const text = `*Work Luxury - طلب*%0A%0A*الاسم:* ${n}%0A*الجوال:* ${p}%0A*الخدمة:* ${s}%0A*التفاصيل:* ${m}`;
-            window.open(`https://wa.me/966549941540?text=${text}`, '_blank');
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const interest = document.getElementById('serviceInterest').value;
+            const msg = document.getElementById('clientMessage').value;
+            
+            const targetNumber = "966549941540";
+            
+            const compiledText = `*طلب تواصل - Work Luxury*%0A%0A` +
+                                 `*الاسم / الجهة:* ${name}%0A` +
+                                 `*رقم الجوال:* ${phone}%0A` +
+                                 `*الخدمة المطلوبة:* ${interest}%0A%0A` +
+                                 `*التفاصيل:*%0A${msg}`;
+            
+            window.open(`https://wa.me/${targetNumber}?text=${compiledText}`, '_blank');
         }
     </script>
 </body>
