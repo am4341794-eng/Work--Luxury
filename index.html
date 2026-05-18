@@ -32,7 +32,6 @@
             scroll-behavior: smooth;
         }
 
-        /* تخصيص الخط الإنجليزي لاسم الشركة فقط */
         .brand-font {
             font-family: 'Cinzel', serif;
             letter-spacing: 2px;
@@ -87,7 +86,9 @@
             color: var(--gold);
         }
 
-        /* القسم الرئيسي (Hero) */
+        /* القسم الرئيسي (Hero) 
+         تم وضع خلفية مشابهة للرخام الأسود في البروفايل، يمكنك استبدال الرابط بمسار صورتك.
+        */
         .hero {
             height: 80vh;
             display: flex;
@@ -96,8 +97,9 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), 
-                        url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop') center/cover no-repeat;
+            /* استبدل الرابط أدناه بصورة البروفايل الخاصة بك، مثلا: url('images/hero-bg.jpg') */
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
             border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
 
@@ -114,7 +116,13 @@
             font-weight: 300;
         }
 
-        /* إعدادات الأقسام العامة */
+        /* خلفية مخصصة لقسم الخدمات (لإضافة طابع صور البروفايل) */
+        .services-bg {
+            /* استبدل الرابط أدناه بصورة المباني من البروفايل، مثلا: url('images/buildings.jpg') */
+            background: linear-gradient(rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover fixed;
+        }
+
         section {
             padding: 100px 40px;
             max-width: 1400px;
@@ -139,7 +147,7 @@
             background-color: var(--gold);
         }
 
-        /* التخطيط الشبكي (Grid Layouts) */
+        /* التخطيط الشبكي */
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -154,7 +162,8 @@
         }
 
         .card {
-            background-color: var(--dark-gray);
+            background-color: rgba(18, 18, 18, 0.85); /* تم إضافة شفافية لتظهر الخلفية من ورائها قليلاً */
+            backdrop-filter: blur(5px);
             border: 1px solid rgba(212, 175, 55, 0.1);
             padding: 40px;
             transition: all 0.3s ease;
@@ -163,6 +172,7 @@
         .card:hover {
             border-color: var(--gold);
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
 
         .card h3 {
@@ -170,6 +180,9 @@
             margin-bottom: 15px;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .card p {
@@ -240,7 +253,7 @@
             border-color: var(--gold);
         }
 
-        /* قسم التواصل والنموذج */
+        /* قسم التواصل */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -353,7 +366,6 @@
             border-top: 1px solid rgba(212, 175, 55, 0.1);
         }
 
-        /* التجاوب مع الشاشات (Responsive) */
         @media (max-width: 900px) {
             header { flex-direction: column; gap: 15px; padding: 20px; }
             nav a { margin: 5px 10px; display: inline-block; }
@@ -373,8 +385,8 @@
         <nav>
             <a href="#about">نظرة عامة</a>
             <a href="#services">الخدمات الأساسية</a>
+            <a href="#medical">التجهيزات الطبية</a>
             <a href="#sub-brands">العلامات المدارة</a>
-            <a href="#experience">تجربة العملاء</a>
             <a href="#partners">شركاؤنا</a>
             <a href="#contact">تواصل معنا</a>
         </nav>
@@ -382,7 +394,7 @@
 
     <section class="hero">
         <h2 class="brand-font">WORK LUXURY</h2>
-        <p>شركة فاخرة متخصصة في الاستثمار وإدارة المحافظ، ورائدة في مجالات <strong>التوريدات والاستيراد والتصدير</strong>، تأسست لخدمة الكيانات المؤسسية وعملاء النخبة الباحثين عن حلول تجارية ومالية مهيكلة وموثوقة.</p>
+        <p>شركة فاخرة متخصصة في الاستثمار وإدارة المحافظ، ورائدة في مجالات <strong>التوريدات والاستيراد والتصدير</strong> وتجهيزات القطاع الطبي، تأسست لخدمة الكيانات المؤسسية وعملاء النخبة.</p>
     </section>
 
     <section id="about">
@@ -397,19 +409,8 @@
             <div>
                 <h3 style="margin-bottom: 15px;">الهيكل التنظيمي</h3>
                 <p style="color: var(--text-muted);">
-                    نحن شركة ذات هيكل خاص متخصصة في توفير خطوط الإمداد، والتداول التجاري، والاستشارات الاستثمارية. نعمل مع الأفراد ذوي الملاءة المالية العالية والشركات التي تسعى إلى تحقيق نمو مدروس وحماية لرأس المال وتسهيل العمليات التجارية عبر الحدود.
+                    نحن شركة ذات هيكل خاص متخصصة في توفير خطوط الإمداد، والتداول التجاري، والاستشارات الاستثمارية. نعمل مع الكيانات المؤسسية التي تسعى إلى تحقيق نمو مدروس وحماية لرأس المال وتسهيل العمليات التجارية عبر الحدود.
                 </p>
-            </div>
-        </div>
-
-        <div class="grid-2" style="margin-top: 60px;">
-            <div class="card">
-                <h3>رؤيتنا</h3>
-                <p>تتمثل رؤيتنا في ترسيخ مكانة الشركة كمرجع إقليمي موثوق في خدمات الاستثمار والتجارة الدولية. نهدف إلى بناء علاقات طويلة الأمد قائمة على جودة التوريدات، واتساق الأداء، والشفافية التامة.</p>
-            </div>
-            <div class="card">
-                <h3>مهمتنا</h3>
-                <p>تقديم استراتيجيات تجارية ومالية مخصصة تتماشى مع أهداف العملاء. نركز على التميز في تنفيذ صفقات الاستيراد والتصدير، واتخاذ القرارات المستنيرة، وإدارة المخاطر بحرفية.</p>
             </div>
         </div>
 
@@ -419,41 +420,42 @@
                 <div class="value-item">السرية التامة</div>
                 <div class="value-item">المساءلة والموثوقية</div>
             </div>
-            <p style="font-size: 16px; max-width: 700px; margin: 0 auto; color: var(--text-muted);">
-                نؤمن بأن إدارة الأعمال ورأس المال تتطلب مسؤولية ودقة وسلوكاً أخلاقياً على كافة المستويات، وهذه القيم هي ما يحدد طبيعة عملياتنا.
-            </p>
         </div>
     </section>
 
-    <section id="services" style="border-top: 1px solid rgba(212, 175, 55, 0.05);">
-        <h2 class="section-title">خدماتنا الأساسية</h2>
-        <div class="grid-3">
-            <div class="card" style="border-color: var(--gold);">
-                <h3 style="color: #fff;">التوريدات والاستيراد والتصدير</h3>
-                <p>إدارة وتسهيل العمليات التجارية الدولية، وتوفير خطوط توريد موثوقة للشركات والمشاريع الكبرى، وتنفيذ صفقات الاستيراد والتصدير بأعلى معايير الجودة والاحترافية.</p>
+    <div class="services-bg">
+        <section id="services" style="padding-bottom: 40px;">
+            <h2 class="section-title" style="color: #fff;">خدماتنا الأساسية</h2>
+            <div class="grid-3">
+                <div class="card" style="border-color: var(--gold); box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.2);">
+                    <h3 style="color: #fff;"><i class="fas fa-ship" style="color: var(--gold);"></i> التوريدات والاستيراد والتصدير</h3>
+                    <p>إدارة وتسهيل العمليات التجارية الدولية، وتوفير خطوط توريد موثوقة للشركات والمشاريع الكبرى، وتنفيذ صفقات الاستيراد والتصدير بأعلى معايير الجودة والاحترافية.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-chart-line" style="color: var(--gold);"></i> خدمات الاستثمار</h3>
+                    <p>استراتيجيات توظيف رأس المال المهيكلة، والاستثمارات الخاصة، واستراتيجيات النمو المتنوعة بناءً على تحليل شامل لظروف السوق.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-briefcase" style="color: var(--gold);"></i> إدارة المحافظ</h3>
+                    <p>عملية مستمرة تتضمن تحسين التوزيع، وتتبع الأداء، وإعادة التوازن الدوري مع تزويد العملاء بتقارير منظمة ومراجعات استراتيجية.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>خدمات الاستثمار</h3>
-                <p>تشمل استراتيجيات توظيف رأس المال المهيكلة، والاستثمارات الخاصة، واستراتيجيات النمو المتنوعة بناءً على تحليل شامل لظروف السوق.</p>
+        </section>
+
+        <section id="medical" style="padding-top: 20px;">
+            <div class="grid-2" style="grid-template-columns: 1fr;">
+                <div class="card" style="border-color: var(--gold); text-align: right; background-color: rgba(10,10,10,0.9);">
+                    <h3 style="color: #fff; font-size: 26px;"><i class="fas fa-hospital-alt" style="color: var(--gold);"></i> تجهيزات المستشفيات والمراكز الطبية</h3>
+                    <p style="font-size: 16px; margin-bottom: 15px; color: #ccc;">
+                        تقدم الشركة حلولاً متكاملة في مجال تجهيز المستشفيات والمراكز الطبية والعيادات، من خلال توفير كافة أنواع الأجهزة الطبية والمستلزمات الطبية بمختلف التخصصات، وفق أعلى معايير الجودة والكفاءة.
+                    </p>
+                    <p style="font-size: 16px; color: #ccc;">
+                        كما نوفر منتجات من مختلف الصناعات والمنشأ العالمية، مع الحرص على تقديم أحدث التقنيات الطبية التي تلبي احتياجات القطاع الصحي، وتشمل خدماتنا <strong>التوريد والتركيب والتشغيل والدعم الفني وخدمات ما بعد البيع.</strong>
+                    </p>
+                </div>
             </div>
-            <div class="card">
-                <h3>خدمات التداول</h3>
-                <p>نقدم حلول تداول احترافية مدعومة بالتحليل الفني وأبحاث السوق، وتحكمها معايير صارمة للمخاطر مع مراقبة مستمرة للسوق.</p>
-            </div>
-            <div class="card">
-                <h3>إدارة المحافظ</h3>
-                <p>عملية مستمرة تتضمن تحسين التوزيع، وتتبع الأداء، وإعادة التوازن الدوري مع تزويد العملاء بتقارير منظمة ومراجعات استراتيجية.</p>
-            </div>
-            <div class="card">
-                <h3>الخبرة في السوق</h3>
-                <p>يتمتع فريقنا بفهم متعمق للأسواق المالية والتجارية الإقليمية والعالمية، مما يمكننا من تحديد الفرص مع تجنب التعرض المفرط للتقلبات.</p>
-            </div>
-            <div class="card">
-                <h3>إدارة المخاطر والتخطيط</h3>
-                <p>نعمل على مواءمة الاستثمارات والموردين مع أهداف العميل، مع تطبيق سياسات صارمة لتنويع المخاطر والحفاظ على استقرار العمليات.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section id="sub-brands" style="border-top: 1px solid rgba(212, 175, 55, 0.05);">
         <h2 class="section-title">الخدمات المتخصصة والعلامات المدارة</h2>
@@ -461,71 +463,17 @@
             <div class="card">
                 <div class="sub-brand-badge">بإدارة شركة بن غيث</div>
                 <h3>خدمات السفر الاحترافية</h3>
-                <p>تعتبر "بن غيث" شركة رائدة في إدارة السفر في المملكة العربية السعودية، بخبرة تزيد عن 40 عاماً في تقديم حلول سفر متكاملة للأفراد والشركات محلياً وعالمياً.</p>
+                <p>تعتبر "بن غيث" شركة رائدة في إدارة السفر في المملكة العربية السعودية، بخبرة تزيد عن 40 عاماً في تقديم حلول سفر متكاملة.</p>
             </div>
             <div class="card">
                 <div class="sub-brand-badge">بإدارة وكالة سطام (SATTAM)</div>
                 <h3>خدمات إدارة الفعاليات</h3>
-                <p>وكالة متكاملة لإدارة الفعاليات والإنتاج الإعلامي والتسويق المباشر في الرياض بخبرة تتجاوز 15 عاماً. تعمل كشريك استراتيجي للجهات الحكومية والشركات الكبرى لتحقيق أعلى عائد على الاستثمار.</p>
+                <p>وكالة متكاملة لإدارة الفعاليات والإنتاج الإعلامي والتسويق المباشر في الرياض بخبرة تتجاوز 15 عاماً.</p>
             </div>
             <div class="card">
                 <div class="sub-brand-badge">بإدارة شركة رياض الخزامى</div>
                 <h3>خدمات التطوير المتقدمة</h3>
-                <p>مقدم خدمات متميز متخصص في التصميم والإدارة والبناء والتطوير. نقدم حلولاً عالية الجودة وعملية، تشمل إعداد الفنادق والحلول الداخلية لقطاع الضيافة.</p>
-            </div>
-        </div>
-
-        <h3 style="text-align: center; margin-top: 60px; margin-bottom: 35px; font-size: 24px;">أقسام شركة رياض الخزامى المحدودة</h3>
-        <div class="grid-2">
-            <div class="card">
-                <h4 style="margin-bottom: 10px;">قطاع المقاولات والأنظمة</h4>
-                <p>تلبية متطلبات السوق السعودي المتسارعة في مجالات الأعمال المدنية، الكهروميكانيكية، وتكامل الأنظمة الأمنية عبر التوريد والتهيئة.</p>
-            </div>
-            <div class="card">
-                <h4 style="margin-bottom: 10px;">الخدمات، التعليم، والتجارة</h4>
-                <p>استقطاب أفضل الشركات التجارية من جميع أنحاء العالم للعمل المشترك داخل المملكة العربية السعودية ومنطقة الخليج.</p>
-            </div>
-            <div class="card">
-                <h4 style="margin-bottom: 10px;">الضيافة (بان ديليسو)</h4>
-                <p>تأسست عام 2012 كشركة متخصصة في خدمات المخابز والمعجنات والتموين، وتعتبر من أسرع الشركات نمواً في سوق الأغذية المبتكرة.</p>
-            </div>
-            <div class="card">
-                <h4 style="margin-bottom: 10px;">الوكالات اللوجستية (كارجو كاب)</h4>
-                <p>شركة أمريكية مقرها نيوجيرسي ولها مكتب إقليمي في الإمارات (دبي)، تقدم خدمات الشحن والتوزيع للأفراد والشركات بدعم تشغيلي احترافي 100%.</p>
-            </div>
-        </div>
-        <div class="card" style="margin-top: 20px; text-align: center;">
-            <h4 style="margin-bottom: 10px;">تجهيزات الفنادق (Hotel Supplies)</h4>
-            <p>توفير أرقى المنتجات الفندقية العالمية وتجهيز المرافق بما يتماشى مع أعلى معايير الجودة الفاخرة.</p>
-        </div>
-    </section>
-
-    <section id="experience" style="border-top: 1px solid rgba(212, 175, 55, 0.05);">
-        <h2 class="section-title">تجربة العملاء وفلسفة النجاح</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>تجربة عملاء فاخرة</h3>
-                <p>نقدم تجربة استثنائية وسرية تامة؛ حيث تتم عمليات التواصل والتقارير والخدمات الاستشارية والتجارية بأعلى درجات الاحترافية.</p>
-            </div>
-            <div class="card">
-                <h3>حلول مخصصة</h3>
-                <p>كل تعامل مع عملائنا هو فريد من نوعه؛ نحن نصمم الحلول بناءً على أهداف التوريد، والاحتياجات المالية، والأهداف الاستراتيجية.</p>
-            </div>
-            <div class="card">
-                <h3>قياس الأداء بدقة</h3>
-                <p>يتم قياس الأداء من خلال مقاييس شفافة وتقارير مهيكلة، مع إعطاء الأولوية المطلقة للاستقرار والاتساق بدلاً من المضاربة.</p>
-            </div>
-            <div class="card">
-                <h3>التركيز الإقليمي</h3>
-                <p>تتركز عملياتنا الأساسية في أسواق الخليج والشرق الأوسط، مع الحفاظ في ذات الوقت على قنوات وعلاقات دولية قوية.</p>
-            </div>
-            <div class="card">
-                <h3>المنظور العالمي</h3>
-                <p>يتيح المنظور العالمي للشركة تنويع قنوات الاستثمار وإدارة الفرص التجارية (الاستيراد والتصدير) العابرة للحدود بشكل آمن وفعال.</p>
-            </div>
-            <div class="card">
-                <h3>فلسفة القيادة</h3>
-                <p><strong>لماذا نحن:</strong> لانضباطنا وسريتنا وحوكمتنا.<br><strong>فلسفتنا:</strong> يُبنى النجاح المستدام عبر الصبر والثقة، مع تفضيل خلق القيمة على المدى الطويل على حساب المكاسب قصيرة الأجل.</p>
+                <p>مقدم خدمات متميز متخصص في التصميم والإدارة والبناء والتطوير والخدمات الفندقية المتكاملة.</p>
             </div>
         </div>
     </section>
@@ -536,20 +484,13 @@
             <div class="partner-item">بابل (Babel)</div>
             <div class="partner-item">عبداللطيف جميل</div>
             <div class="partner-item">مجموعة شلهوب</div>
-            <div class="partner-item">روبي تيوزداي (Ruby Tuesday)</div>
             <div class="partner-item">مجموعة مستشفيات السعودي الألماني</div>
             <div class="partner-item">مدينة الملك عبدالله (BAY LA SUN)</div>
             <div class="partner-item">مستشفى الملك فيصل التخصصي ومركز الأبحاث</div>
-            <div class="partner-item">مقهى أربيكا (ARABICA)</div>
             <div class="partner-item">المركز الطبي الدولي</div>
-            <div class="partner-item">مدرسة جدة الإعدادية النحوية</div>
             <div class="partner-item">فندق لو ميريديان (LE MERIDIEN)</div>
-            <div class="partner-item">مدارس الأجيال المتطورة العالمية</div>
-            <div class="partner-item">أتيس إنترناشيونال</div>
             <div class="partner-item">فنادق ومنتجعات موفنبيك</div>
             <div class="partner-item">شركة نستله (Nestle)</div>
-            <div class="partner-item">مدرسة جدة الخاصة العالمية</div>
-            <div class="partner-item">المدرسة الفرنسية العالمية في جدة</div>
         </div>
     </section>
 
@@ -558,17 +499,14 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h3>المقرات الرئيسية</h3>
-                
                 <div class="info-block">
                     <h4>فرع المملكة العربية السعودية</h4>
                     <p style="text-align: right; direction: rtl;">الرياض - حي السليمانية - شارع الأمير سلطان بن عبدالعزيز</p>
                 </div>
-
                 <div class="info-block">
                     <h4>فرع جمهورية مصر العربية</h4>
                     <p style="text-align: right; direction: rtl;">القاهرة - القطامية - مدينة الفرسان - مبنى 21 - شقة 910</p>
                 </div>
-
                 <div class="info-block">
                     <h4>قنوات الاتصال المباشر</h4>
                     <p>+966 56 927 7747 <br> +966 55 141 2111</p>
@@ -581,19 +519,19 @@
                 <form id="luxuryForm" onsubmit="submitToWhatsApp(event)">
                     <div class="form-group">
                         <label>الاسم الكريم / اسم الجهة</label>
-                        <input type="text" id="clientName" required placeholder="مثال: شركة، مؤسسة، أو مكتب العائلة">
+                        <input type="text" id="clientName" required placeholder="مثال: شركة، مستشفى، أو مؤسسة">
                     </div>
                     <div class="form-group">
                         <label>رقم الجوال للتواصل المباشر</label>
                         <input type="tel" id="clientPhone" required placeholder="مثال: +966...">
                     </div>
                     <div class="form-group">
-                        <label>الخدمة المطلوبة أو مجال الاهتمام</label>
-                        <input type="text" id="serviceInterest" placeholder="مثال: توريدات / استيراد وتصدير / استثمار">
+                        <label>الخدمة المطلوبة</label>
+                        <input type="text" id="serviceInterest" placeholder="مثال: توريدات / تجهيزات طبية / استيراد">
                     </div>
                     <div class="form-group">
-                        <label>تفاصيل الطلب أو الاستفسار</label>
-                        <textarea id="clientMessage" rows="4" required placeholder="يرجى توضيح طلب التوريد أو الأهداف الاستثمارية الخاصة بك..."></textarea>
+                        <label>تفاصيل الطلب</label>
+                        <textarea id="clientMessage" rows="4" required placeholder="يرجى توضيح طلب التجهيزات أو التوريد الخاص بك..."></textarea>
                     </div>
                     <button type="submit" class="submit-btn">إرسال الطلب عبر الواتساب <i class="fab fa-whatsapp"></i></button>
                 </form>
@@ -612,26 +550,21 @@
     <script>
         function submitToWhatsApp(e) {
             e.preventDefault();
-            
-            // سحب البيانات من الحقول
             const name = document.getElementById('clientName').value;
             const phone = document.getElementById('clientPhone').value;
             const interest = document.getElementById('serviceInterest').value;
             const msg = document.getElementById('clientMessage').value;
             
-            // رقم الواتساب المحدث 
+            // رقم الواتساب المطلوب
             const targetNumber = "966549941540";
             
-            // تنسيق رسالة الواتساب بشكل أنيق واحترافي باللغة العربية
             const compiledText = `*طلب تواصل - Work Luxury*%0A%0A` +
                                  `*الاسم / الجهة:* ${name}%0A` +
                                  `*رقم الجوال:* ${phone}%0A` +
                                  `*الخدمة المطلوبة:* ${interest}%0A%0A` +
                                  `*التفاصيل:*%0A${msg}`;
             
-            // توجيه المستخدم إلى رابط الواتساب
-            const whatsappUrl = `https://wa.me/${targetNumber}?text=${compiledText}`;
-            window.open(whatsappUrl, '_blank');
+            window.open(`https://wa.me/${targetNumber}?text=${compiledText}`, '_blank');
         }
     </script>
 </body>
